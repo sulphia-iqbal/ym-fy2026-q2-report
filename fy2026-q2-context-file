@@ -1,0 +1,208 @@
+# CONTEXT FILE — YM National Finance Report · Q2 FY2026
+
+> **Purpose of this file:** Master context for generating the Young Muslims (YM) Q2 2026 National
+> Finance Report. Feed this file (plus the companion data files listed in §9) to Claude/an AI
+> assistant when drafting the report. Anything marked `[DATA NEEDED]` or `[TBD]` must be filled
+> in before generation, or the generator should insert a clearly-marked placeholder.
+
+---
+
+## 1. Output Specification
+
+- **Deliverable:** A polished, print-ready **PDF** hosted on GitHub Pages (viewed/downloaded from the repo, same hosting approach as the NN Finance Handbook).
+- **Recommended workflow:** Build as a single-file **HTML page in the Handbook design system** (§8), then export to PDF via print-to-PDF with `@media print` styles (page breaks between major sections, no sticky nav, US Letter). This keeps visual parity with the handbook while producing a clean PDF.
+- **Length target:** ~10–16 pages.
+- **Page furniture:** Cover page → Bismillah SVG → table of contents → numbered sections (01, 02, 03… matching handbook convention) → closing/footer: "Young Muslims · Finance Department · finance@ymsisters.com · Q2 FY2026 National Finance Report · For Internal Use Only".
+- **Reporting period:** Q2 FY2026 (specify exact months: `[CONFIRM: e.g., April–June 2026]`).
+
+## 2. Audience & Tone
+
+- **Audience:** YM National Shura (NS), SubRegional Coordinators (SRCs), SR Finance Leads, NN Coordinators (NNCs) across 170+ chapters, and national leadership.
+- **Tone:** Professional but warm and community-oriented. Celebrate wins, be transparent about numbers, be firm-but-friendly on policy reminders. Mirror the handbook's voice: direct rules ("No Receipt = No Approval") softened with helpful explanation.
+- **Islamic framing:** Open with Bismillah (use the handbook's `bismillah.svg`). Honorifics: Allah ﷻ, the Messenger ﷺ. Appropriate du'a/gratitude framing in intro and closing is welcome; keep it natural, not decorative filler.
+
+## 3. Glossary / Terminology (use consistently)
+
+| Term | Meaning |
+|---|---|
+| YM | Young Muslims (the national organization; this is the Sisters' finance report) |
+| NN | NeighborNet — a local chapter |
+| SR | SubRegion — a grouping of NNs |
+| NS | National Shura — national leadership council |
+| NNC | NeighborNet Coordinator |
+| SRC | SubRegional Coordinator |
+| YMC | YM Conference — national conference, held in Baltimore |
+| YMLC | YM Leadership Conference — held in Florida this year; event occurs in Q3 but **finances hit in Q2** |
+| MAD | Muslim Advocacy Day — advocacy event in Washington, D.C. |
+| YM Gives | National service campaign run across chapters |
+| JotForm | The single intake form for all income/expense/transfer submissions |
+| Dashboard | Per-NN/SR finance dashboard spreadsheets refreshed from JotForm data |
+| YM Bank | Chapter funds held at YM National (not physically with the NN) |
+| Cash Box | NN's local physical cash (≤ $200 at any time) |
+| Personal Bank | NNC's personal account temporarily holding YM funds |
+
+## 4. Report Structure (section order)
+
+1. **Cover + Intro letter** — brief note from the National Finance Team framing the quarter. `[DATA NEEDED: 2–4 sentence intro or key theme for the quarter]`
+2. **Q2 at a Glance** — hero stat cards (see §5.1)
+3. **Q2 Income & Expense Breakdown** — national-level (see §5.2)
+4. **Q2 Fundraising Summary** — (see §5.3)
+5. **Q2 National Initiatives & Event Finances** — YMC, YMLC, MAD, YM Gives (see §5.4)
+6. **Financial Aid Deep Dive** — (see §5.5)
+7. **Q2 SubRegional Activity** — (see §5.6)
+8. **Highlights** — NN highlight, SR highlight, NS tours (see §5.7)
+9. **Notes from Finance** — handbook release, policy reminders (see §5.8)
+10. **Closing** — thank-you, contact info, footer
+
+Quotes from National Shura members and event photos from NNs should be interleaved throughout (pull from the media/quotes context file, §9.4) — roughly one pull-quote or photo strip per major section.
+
+## 5. Section-by-Section Content Requirements
+
+### 5.1 Q2 at a Glance
+Hero stat cards in handbook card style. Include:
+- Total income `[DATA NEEDED]`
+- Total expenses `[DATA NEEDED]`
+- Net change `[DATA NEEDED]`
+- **Number of JotForm submissions in Q2** `[DATA NEEDED]` (+ % approved vs. denied if available)
+- Number of active NNs submitting `[DATA NEEDED]` / 170+ chapters
+- Total financial aid disbursed `[DATA NEEDED]`
+- Total raised via fundraising `[DATA NEEDED]`
+- Optional: quarter-over-quarter deltas vs. Q1 (↑/↓ badges in sys-green/red)
+
+### 5.2 Q2 Income & Expense Breakdown
+- Income by category (Event Registrations, Merchandise, Fundraising, Donations, Transfers) — table + chart. `[DATA NEEDED: category totals]`
+- Expenses by category (Financial Aid, Fundraising, Merchandise, NN Operations, SR Operations, National Operations, Tarbiyyah, Transportation, Joint Events – Brothers Settlements) — table + chart. `[DATA NEEDED: category totals]`
+- Brief 2–3 sentence narrative on what drove the biggest categories (likely YMC/YMLC pass-throughs — explain plainly).
+- Chart style: simple horizontal bar or donut using brand green/gold palette; no 3D, no gradients.
+
+### 5.3 Q2 Fundraising Summary
+- Total raised nationally `[DATA NEEDED]`
+- Top fundraising campaigns/types (e.g., Ramadan campaigns, bake sales, donation drives) `[DATA NEEDED]`
+- Top 3–5 fundraising NNs or SRs (shout-outs) `[DATA NEEDED]`
+- Tie-in to YM Gives if fundraising overlapped with the service campaign.
+
+### 5.4 Q2 National Initiatives & Event Finances
+One card/subsection per event. For each: what it is (1–2 sentences), headline financials, and a short narrative.
+
+**YMC — YM Conference (Baltimore)**
+- Registrations/income, major expense lines (venue, hotel, buses/pass-throughs), net position. `[DATA NEEDED]`
+- Note if hotel/bus costs were pass-throughs (collected from attendees and paid out — not true program cost).
+
+**YMLC — YM Leadership Conference (Florida)**
+- ⚠️ Framing note (state this explicitly in the report): *YMLC takes place in Q3, but deposits and major payments occurred in Q2, so its expenses appear in this quarter's numbers.*
+- Q2-incurred amounts: deposits, travel, registration income received so far. `[DATA NEEDED]`
+
+**MAD — Muslim Advocacy Day (Washington, D.C.)**
+- Travel/lodging/registration costs, how it was funded (national budget vs. SR contributions). `[DATA NEEDED]`
+
+**YM Gives (national service campaign)**
+- Total spent on supplies across chapters, number of NNs that participated, any funds raised for external causes. `[DATA NEEDED]`
+
+### 5.5 Financial Aid Deep Dive
+This is a feature section — give it room.
+- **Number of applicants** in Q2 `[DATA NEEDED]`
+- **Breakdown of where applications came from** (by SR, and NN vs. SR vs. national events) `[DATA NEEDED]`
+- **Who is supporting financial aid** — funding sources: national budget, SR budgets, NN budgets, designated donations `[DATA NEEDED: source breakdown]`
+- **Total amount given** + **percentage breakdown** (by event: YMC vs. YMLC vs. other; and/or by SR) `[DATA NEEDED]`
+- **Cypress story (featured callout, gold-fill highlight box):** Cypress NN donated funds to their **entire SubRegion**, covering **all of that SR's financial aid requests for YMLC**. `[DATA NEEDED: amount, SR name, number of attendees covered, and ideally a quote from Cypress or the SRC]`
+- Optional: 1 anonymized sentence on impact ("aid made attendance possible for N sisters who otherwise couldn't attend").
+
+### 5.6 Q2 SubRegional Activity
+Data comes from the SR activity Google Sheets export (§9.3). Include:
+- **Most financially active SRs** (by transaction count and/or dollar volume) — top 3–5 table
+- **Most financially active NN within each SR** — one row per SR
+- **Most common expense categories** nationally and any notable SR-level differences
+- JotForm submission counts by SR
+- Keep celebratory, not comparative-shaming: frame low activity as "we'd love to see more dashboards active" rather than calling out laggards.
+
+### 5.7 Highlights
+- **NN Highlight (featured):** A NeighborNet in **Maine** received a **grant from their state government**. `[DATA NEEDED: NN name, grant amount, what it funds, how they applied, quote from the NN, 1–2 photos]` Frame as a model for other NNs — external funding is possible.
+- **SR Highlight:** `[TBD — pick one before generation]`
+- **NS Tours** — National Shura visits to meet with local leadership:
+  - Georgia (GA): **Sarah & Ayra** `[DATA NEEDED: dates, what was covered, photo, quote]`
+  - Dallas: **Aisha & Thameena** `[DATA NEEDED: dates, what was covered, photo, quote]`
+- Each highlight needs a quote + at least one photo (see §9.4).
+
+### 5.8 Notes from Finance
+**Handbook launch (lead item, celebratory):** Announce the release of the **NN Finance Handbook** — link to https://sulphia-iqbal.github.io/neighbornet-finances-handbook/ym-nn-finances-handbook.html. One-paragraph description: covers accounts, JotForm submission types, dashboards, approvals, lump sums, audits, with a full case study.
+
+**Friendly Financial Policy Reminders** (card list, firm-but-friendly tone):
+1. **Zelle is now available for reimbursements.** Prefer **Zelle over Venmo** when possible. Coordinate Zelle details with finance@ymsisters.com after submitting the JotForm.
+2. **No personal expenses on the same receipt as YM expenses.** Mixed receipts **will be denied** — we are strict on this. Make YM purchases on their own receipt.
+3. **Proper event names in Expense Details are required.** Format: `Date · Event Name · Subcategory` (e.g., `1/9/26 NJ Gala – Decorations`). Some NNs are omitting event names and being contacted individually to explain their expenses — save everyone the back-and-forth by labeling correctly the first time.
+4. **NN collab confusion, cleared up:** When two NNs split costs, up to **3 JotForms** are needed — (①) the payer's reimbursement expense, (②) the other NN's expense for sending their share, (③) the receiving NN's income. Point readers to Handbook §05b for the full worked example.
+- Optional additions if space allows: receipt format rules (PDFs not screenshots for online orders), "no receipt = no approval."
+
+## 6. Quotes & Images (interleave throughout)
+
+- `[DATA NEEDED: 3–5 quotes from National Shura members]` — attribute with name + role. Use handbook-style pull-quote blocks (gold accent).
+- `[DATA NEEDED: photos from NN events during Q2]` — aim for 6–10 images: YMC, YMLC prep, MAD, YM Gives, NS tour visits, Maine NN, general NN events. Every image needs a caption (`Event · NN/SR · Month`). See image manifest, §9.4.
+- Do not use stock photos. If an image is missing at generation time, insert a labeled gray placeholder box with the intended caption.
+
+## 7. Data Rules & Number Hygiene
+
+- All figures come from the companion data files (§9) — **never invent or estimate numbers**. If a figure is missing, render `[PENDING]` visibly rather than guessing.
+- Dollar amounts: whole dollars with commas ($12,450); use $ prefix always.
+- Percentages: whole numbers unless precision matters (34%, not 34.17%).
+- Income = green (`--green` / `--sys-green`), expenses = red (`--red`) — consistent with dashboard conventions.
+- Pass-through amounts (e.g., YMC hotel/bus collections) must be labeled as pass-throughs so they don't inflate perceived program costs.
+- FY2026 quarter definitions: `[CONFIRM: fiscal calendar — which months = Q2]`.
+
+## 8. Style Guide (from NN Finance Handbook — match exactly)
+
+Apple/iOS-inspired design system. Reuse these tokens verbatim:
+
+```css
+:root {
+  /* Surfaces */
+  --bg: #F2F2F7; --surface: #FFFFFF; --surface-2: #F2F2F7;
+  /* Labels */
+  --label: #1C1C1E; --label-2: #636366; --label-3: #AEAEB2;
+  /* Separators */
+  --sep: rgba(60,60,67,0.12); --sep-opaque: #E5E5EA;
+  /* Brand */
+  --green: #1A7A4A; --green-fill: rgba(26,122,74,0.10);
+  --green-fill-strong: rgba(26,122,74,0.18);
+  --gold: #C28A2A; --gold-fill: rgba(194,138,42,0.10);
+  /* System semantic */
+  --red: #FF3B30; --red-fill: rgba(255,59,48,0.09);
+  --sys-green: #34C759; --sys-green-fill: rgba(52,199,89,0.10);
+  --blue: #007AFF; --blue-fill: rgba(0,122,255,0.09);
+  --orange: #FF9500; --orange-fill: rgba(255,149,0,0.10);
+  /* Shadows */
+  --s1: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --s2: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  --s3: 0 8px 28px rgba(0,0,0,0.09), 0 2px 8px rgba(0,0,0,0.05);
+  /* Radius */
+  --r1: 8px; --r2: 12px; --r3: 16px; --r4: 20px;
+}
+```
+
+- **Fonts:** Headings: `-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif`; body: same stack with `'SF Pro Text'`.
+- **Layout patterns to reuse from the handbook:** numbered section badges (01, 02…), white rounded cards on the `--bg` gray canvas, definition-list stat rows, green/gold pill badges, warning callouts (red-fill for strict rules, gold-fill for featured highlights, blue-fill for informational notes), clean tables with `--sep` row dividers.
+- **Brand green** (`#1A7A4A`) is the primary accent; **gold** (`#C28A2A`) for highlights/quotes; system red/green only for financial semantics (expense/income).
+- Bismillah SVG asset: `https://sulphia-iqbal.github.io/neighbornet-finances-handbook/bismillah.svg`
+- **Print/PDF additions:** `@media print` — remove nav, force `page-break-before` on numbered sections, avoid breaking inside cards (`break-inside: avoid`), US Letter, ~0.5in margins, ensure backgrounds print (`print-color-adjust: exact`).
+
+## 9. Companion Context Files (feed alongside this file)
+
+| File | Contents | Source |
+|---|---|---|
+| §9.1 `data-financials-q2.md` (or .csv) | National income & expense totals by category, fundraising totals, per-event financials (YMC/YMLC/MAD/YM Gives), Q1 comparables | QuickBooks + Admin Hub master sheet |
+| §9.2 `data-financial-aid-q2.md` | Applicant count, application source breakdown, funding source breakdown, total disbursed, % breakdowns, Cypress details | Financial aid tracking sheet |
+| §9.3 `data-sr-activity-q2.md` | Per-SR: JotForm submission counts, dollar volume, top NN, top expense categories; national top-5 lists | SR activity Google Sheets export |
+| §9.4 `media-quotes-images.md` | NS quotes (text + attribution), image manifest (filename → section → caption), highlight quotes (Maine NN, Cypress, NS tours) | Collected from leadership/WhatsApp |
+| §9.5 `style-reference.html` | Full handbook HTML source (design system reference) | Saved from GitHub repo |
+
+## 10. Open Items Checklist (resolve before generation)
+
+- [ ] Confirm Q2 FY2026 month range
+- [ ] Pick the SR Highlight
+- [ ] Maine NN grant details + quote + photos
+- [ ] Cypress donation amount, SR name, coverage details
+- [ ] NS tour details (GA, Dallas): dates, topics, photos, quotes
+- [ ] 3–5 NS quotes collected
+- [ ] JotForm Q2 submission count (and approval rate)
+- [ ] All §5.1–5.5 figures pulled from QuickBooks/sheets
+- [ ] SR activity sheet exported and summarized
+- [ ] Intro letter theme/notes from Finance Team lead
