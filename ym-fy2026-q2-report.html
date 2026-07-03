@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 FY2026 National Finance Report | Young Muslims</title>
+  <style>
+    :root {
+      /* Surfaces */
+      --bg: #F2F2F7;
+      --surface: #FFFFFF;
+      --surface-2: #F2F2F7;
+
+      /* Labels */
+      --label: #1C1C1E;
+      --label-2: #636366;
+      --label-3: #AEAEB2;
+
+      /* Separators */
+      --sep: rgba(60, 60, 67, 0.12);
+      --sep-opaque: #E5E5EA;
+
+      /* Brand */
+      --green: #1A7A4A;
+      --green-fill: rgba(26, 122, 74, 0.10);
+      --green-fill-strong: rgba(26, 122, 74, 0.18);
+      --gold: #C28A2A;
+      --gold-fill: rgba(194, 138, 42, 0.10);
+
+      /* System semantic */
+      --red: #FF3B30;
+      --red-fill: rgba(255, 59, 48, 0.09);
+      --sys-green: #34C759;
+      --sys-green-fill: rgba(52, 199, 89, 0.10);
+      --blue: #007AFF;
+      --blue-fill: rgba(0, 122, 255, 0.09);
+      --orange: #FF9500;
+      --orange-fill: rgba(255, 149, 0, 0.10);
+
+      /* Shadows */
+      --s1: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --s2: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+      --s3: 0 8px 28px rgba(0, 0, 0, 0.09), 0 2px 8px rgba(0, 0, 0, 0.05);
+
+      /* Radius */
+      --r1: 8px;
+      --r2: 12px;
+      --r3: 16px;
+      --r4: 20px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 14px;
+      color: var(--label);
+      background: #DADAE0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* ── DRAFT BANNER (screen only) ── */
+    .draft-banner {
+      background: #1C1C1E;
+      color: rgba(255,255,255,0.82);
+      font-size: 12.5px;
+      text-align: center;
+      padding: 9px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+    .draft-banner strong { color: var(--gold); }
+
+    /* ── PAGE (fixed, print-ready) ── */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      background: var(--surface);
+      margin: 0.4in auto;
+      box-shadow: var(--s3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-content { padding: 0.5in 0.55in 0.75in; }
+
+    /* ── RUNNING PAGE HEADER / FOOTER ── */
+    .page-chrome {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 13px;
+      margin-bottom: 26px;
+      border-bottom: 0.5px solid var(--sep-opaque);
+    }
+
+    .page-chrome .brand {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--label-2);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .page-chrome .section-tag {
+      font-size: 11px;
+      color: var(--label-3);
+      font-weight: 500;
+    }
+
+    .page-footer-strip {
+      position: absolute;
+      bottom: 0.35in;
+      left: 0.55in;
+      right: 0.55in;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--label-3);
+      border-top: 0.5px solid var(--sep-opaque);
+      padding-top: 10px;
+    }
+
+    /* ── COVER PAGE ── */
+    .page.cover {
+      background: linear-gradient(155deg, #0D3B20 0%, #1A5C35 55%, #0D3B20 100%);
+      color: #fff;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 55%, rgba(52, 199, 89, 0.14) 0%, transparent 60%),
+        radial-gradient(ellipse at 82% 18%, rgba(194, 138, 42, 0.13) 0%, transparent 52%);
+      pointer-events: none;
+    }
+
+    .cover-top {
+      position: relative; z-index: 1;
+      padding: 0.55in 0.65in 0;
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+
+    .cover-org-mark { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 700; }
+    .cover-meta-small { font-size: 11px; color: rgba(194,138,42,0.85); text-align: right; line-height: 1.8; font-weight: 600; letter-spacing: 0.04em; }
+
+    .cover-hero { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0.3in 0.65in; }
+    .cover-hero-org { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(194, 138, 42, 0.85); margin-bottom: 18px; font-weight: 600; }
+    .cover-hero h1 { font-size: 40pt; font-weight: 700; color: #fff; line-height: 1.08; margin-bottom: 14px; letter-spacing: -0.03em; }
+    .cover-hero-desc { font-size: 13pt; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.55; max-width: 5.2in; }
+    .cover-period {
+      font-size: 11.5px; color: rgba(255,255,255,0.8); margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.16); padding: 7px 16px; border-radius: 100px; width: fit-content;
+    }
+
+    .cover-meta-strip {
+      position: relative; z-index: 1;
+      padding: 0.3in 0.65in;
+      border-top: 0.5px solid rgba(194,138,42,0.25);
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+    }
+    .cover-meta-strip label { display: block; font-size: 10px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .cover-meta-strip span { font-size: 13px; color: white; font-weight: 500; }
+
+    /* ── TOC PAGE ── */
+    .toc-list { display: flex; flex-direction: column; margin-top: 8px; }
+    .toc-row {
+      display: flex; align-items: center; gap: 16px; padding: 15px 16px; border-radius: var(--r2);
+      text-decoration: none; color: inherit; border-bottom: 0.5px solid var(--sep-opaque);
+    }
+    .toc-row:last-child { border-bottom: none; }
+    .toc-num { background: var(--green); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 100px; flex-shrink: 0; }
+    .toc-row .toc-title { font-size: 16px; font-weight: 700; color: var(--label); letter-spacing: -0.01em; }
+    .toc-row .toc-sub { font-size: 12px; color: var(--label-2); margin-top: 2px; }
+    .toc-arrow { color: var(--label-3); font-size: 14px; }
+
+    .sub-title { font-size: 11px; font-weight: 700; color: var(--label-2); text-transform: uppercase; letter-spacing: 0.09em; margin: 22px 0 12px; }
+
+    /* ── SECTION HEADER · OPEN ── */
+    .section-open { margin-bottom: 26px; }
+    .section-open h2 { font-size: 27px; font-weight: 700; color: var(--label); letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.15; }
+    .section-open .section-sub-open { font-size: 14px; color: var(--label-2); margin-bottom: 16px; }
+    .section-open .accent-rule { width: 48px; height: 2px; background: var(--gold); border-radius: 1px; }
+    .body-text { font-size: 14px; color: var(--label-2); line-height: 1.65; margin-bottom: 12px; }
+
+    /* ── LETTER ── */
+    .letter-body p { font-size: 13.5px; color: var(--label-2); line-height: 1.68; margin-bottom: 13px; }
+    .letter-body p.lead::first-letter { font-size: 38px; font-weight: 700; color: var(--green); float: left; line-height: 0.75; padding: 4px 7px 0 0; }
+    .letter-body .pull-quote { padding: 12px 18px; }
+    .letter-body .pull-quote p { font-size: 13.5px; margin-bottom: 4px; }
+    .letter-signoff p { font-size: 13.5px; color: var(--label-2); }
+
+    /* ── PLACEHOLDER TAG ── */
+    .ph {
+      display: inline-flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 100px;
+      background: var(--surface-2); border: 1px dashed var(--label-3); color: var(--label-2);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; line-height: 1.8;
+    }
+
+    /* ── CALLOUTS ── */
+    .callout { padding: 13px 18px; margin: 14px 0; border-radius: var(--r2); font-size: 13px; line-height: 1.6; }
+    .callout-rule { background: var(--green-fill); border: 0.5px solid rgba(26, 122, 74, 0.22); color: #0D4A2A; }
+    .callout-rule strong { color: var(--green); }
+    .callout-warn { background: var(--gold-fill); border: 0.5px solid rgba(194, 138, 42, 0.22); color: #5C3A10; }
+    .callout-warn strong { color: var(--gold); }
+    .callout-info { background: var(--blue-fill); border: 0.5px solid rgba(0, 122, 255, 0.18); color: #003A80; }
+    .callout-info strong { color: var(--blue); }
+
+    /* ── GRIDS ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 14px 0; }
+
+    /* ── CARDS ── */
+    .card { background: var(--surface); border-radius: var(--r3); padding: 20px 22px; margin-bottom: 12px; box-shadow: var(--s1); border: 0.5px solid var(--sep); }
+    .card h3 { font-size: 14px; font-weight: 600; color: var(--label); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .card p, .card li { font-size: 13px; color: var(--label-2); line-height: 1.6; }
+
+    /* ── STAT CARDS ── */
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 14px 0; }
+    .stat-card { background: var(--surface); border: 0.5px solid var(--sep); border-top: 3px solid var(--green); border-radius: var(--r3); padding: 16px 16px 14px; box-shadow: var(--s1); }
+    .stat-card.exp { border-top-color: var(--red); }
+    .stat-card.gold { border-top-color: var(--gold); }
+    .stat-card.blue { border-top-color: var(--blue); }
+    .stat-label { font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--label-2); margin-bottom: 10px; }
+    .stat-value { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; color: var(--label-3); line-height: 1.1; }
+    .stat-sub { margin-top: 8px; }
+
+    /* ── ACCOUNT-STYLE CARDS ── */
+    .account-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 14px 0; }
+    .account-card { background: var(--surface); border: 0.5px solid var(--sep); border-top: 2.5px solid var(--green); border-radius: var(--r3); padding: 18px 20px; box-shadow: var(--s1); }
+    .account-card.gold-top { border-top-color: var(--gold); }
+    .account-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 11px; border-radius: 100px; display: inline-block; margin-bottom: 10px; background: var(--green-fill); color: var(--green); }
+    .account-card h3 { font-size: 14px; font-weight: 600; color: var(--label); margin-bottom: 6px; letter-spacing: -0.01em; }
+    .account-card p { font-size: 12.5px; color: var(--label-2); line-height: 1.55; }
+
+    /* ── KV ── */
+    .kv-inner { background: var(--surface-2); border-radius: var(--r1); padding: 11px 13px; margin-top: 10px; border: 0.5px solid var(--sep-opaque); }
+    .kv-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 0.5px solid var(--sep-opaque); font-size: 12.5px; }
+    .kv-row:last-child { border-bottom: none; }
+    .kv-key { color: var(--label-2); }
+    .kv-val { font-weight: 600; color: var(--label); }
+
+    /* ── TABLE ── */
+    table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border-radius: var(--r2); overflow: hidden; border: 0.5px solid var(--sep-opaque); font-size: 13px; margin: 12px 0; box-shadow: var(--s1); }
+    thead tr { background: var(--surface-2); }
+    thead th { padding: 11px 16px; text-align: left; color: var(--label-2); font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; border-bottom: 0.5px solid var(--sep-opaque); }
+    tbody tr:nth-child(even) { background: rgba(242, 242, 247, 0.55); }
+    tbody td { padding: 10px 16px; color: var(--label); border-bottom: 0.5px solid var(--sep-opaque); }
+    tbody tr:last-child td { border-bottom: none; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* ── BADGE ── */
+    .badge { display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 100px; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+    .badge-exp { background: var(--red-fill); color: var(--red); }
+    .badge-opt { background: var(--blue-fill); color: var(--blue); }
+
+    /* ── BAR CHART ── */
+    .bar-chart { margin: 14px 0 18px; }
+    .bar-row { display: grid; grid-template-columns: 170px 1fr 68px; align-items: center; gap: 12px; margin-bottom: 9px; font-size: 12px; }
+    .bar-row .bar-label { color: var(--label-2); font-weight: 500; }
+    .bar-track { background: var(--surface); border: 1px dashed var(--sep-opaque); border-radius: 100px; height: 12px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 100px; width: 0%; }
+    .bar-fill.income { background: var(--green); }
+    .bar-fill.expense { background: var(--red); }
+    .bar-row .bar-val { text-align: right; }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote { border-left: 3px solid var(--gold); background: var(--gold-fill); border-radius: 0 var(--r2) var(--r2) 0; padding: 15px 20px; margin: 14px 0; }
+    .pull-quote p { font-size: 14px; font-style: italic; color: #5C3A10; line-height: 1.5; margin-bottom: 8px; }
+    .pull-quote cite { font-size: 11px; font-style: normal; font-weight: 600; color: var(--gold); display: block; }
+
+    /* ── IMAGE PLACEHOLDER ── */
+    .img-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 14px 0; }
+    .img-ph { background: var(--surface-2); border: 1.5px dashed var(--sep-opaque); border-radius: var(--r2); display: flex; align-items: center; justify-content: center; color: var(--label-3); font-size: 12px; text-align: center; padding: 14px; }
+    .img-ph-cap { font-size: 11px; color: var(--label-2); margin-top: 6px; text-align: center; }
+
+    /* ── CASE STUDY / FEATURE BOX ── */
+    .cs-wrapper { background: var(--surface); border: 0.5px solid var(--sep-opaque); border-radius: var(--r4); padding: 24px; margin: 14px 0; box-shadow: var(--s2); }
+    .cs-wrapper .cs-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .cs-wrapper .cs-label::before { content: ''; display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 1px; }
+    .cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
+    .cs-block { background: var(--surface-2); border: 0.5px solid var(--sep-opaque); border-radius: var(--r2); padding: 14px 16px; }
+    .cs-block h4 { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label-2); font-weight: 700; margin-bottom: 10px; }
+    .cs-block .cs-figure { font-size: 18px; font-weight: 700; color: var(--label-3); }
+
+    /* ── STEPS ── */
+    .steps { margin: 10px 0; }
+    .step { display: flex; gap: 14px; padding: 14px 0; border-bottom: 0.5px solid var(--sep-opaque); align-items: flex-start; }
+    .step:last-child { border-bottom: none; }
+    .step-n { width: 28px; height: 28px; background: var(--green-fill); color: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .step-body h4 { font-size: 13.5px; font-weight: 600; color: var(--label); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .step-body p { font-size: 12.5px; color: var(--label-2); line-height: 1.55; }
+    .step-body ul { list-style: none; padding: 0; margin-top: 6px; }
+    .step-body ul li { font-size: 12.5px; color: var(--label-2); line-height: 1.55; padding: 3px 0 3px 16px; position: relative; }
+    .step-body ul li::before { content: '·'; color: var(--green); font-weight: 700; position: absolute; left: 0; }
+    .step-body ul li strong { color: var(--label); }
+
+    hr.sep { border: none; height: 0.5px; background: var(--sep-opaque); margin: 6px 0; }
+
+    /* ── CLOSING FOOTER BLOCK ── */
+    .closing-footer { background: #0D3B20; color: rgba(255, 255, 255, 0.75); text-align: center; padding: 34px 24px; border-radius: var(--r3); margin-top: 20px; }
+    .closing-footer .b { font-size: 16px; color: var(--gold); margin-bottom: 10px; font-weight: 400; opacity: 0.9; }
+    .closing-footer a { color: rgba(194, 138, 42, 0.85); text-decoration: none; }
+
+    /* ── PRINT ── */
+    @media print {
+      @page { size: letter; margin: 0; }
+      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      body { background: white; }
+      .draft-banner { display: none; }
+      .page { margin: 0; box-shadow: none; page-break-after: always; }
+      .page:last-child { page-break-after: auto; }
+      .card, .stat-card, .account-card, .cs-wrapper, table, .img-ph,
+      .pull-quote, .callout, .step, .toc-row {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="draft-banner">
+    <strong>DRAFT SCAFFOLD</strong> — items tagged <span class="ph" style="vertical-align:middle;">Pending</span> await the companion data files (§9). Not for distribution.
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 1 — COVER
+  ══════════════════════════════════ -->
+  <div class="page cover">
+    <div class="cover-top">
+      <div class="cover-org-mark">Young Muslims<br>Finance Department</div>
+      <div class="cover-meta-small">FY26 · Q2 Report<br>Issued <span class="ph" style="background:transparent; border-color:rgba(255,255,255,0.4); color:rgba(255,255,255,0.7);">Confirm</span></div>
+    </div>
+
+    <div class="cover-hero">
+      <div class="cover-hero-org">National Finance Report</div>
+      <h1>Q2 FY2026<br>Finance Report</h1>
+      <p class="cover-hero-desc">A transparent look at income, expenses, fundraising, and financial aid across NeighborNets nationwide.</p>
+      <div class="cover-period">Reporting Period: <span class="ph" style="background:transparent; border-color:rgba(255,255,255,0.4); color:rgba(255,255,255,0.7);">Confirm — e.g. Apr–Jun 2026</span></div>
+    </div>
+
+    <div class="cover-meta-strip">
+      <div><label>Prepared by</label><span>Finance Department</span></div>
+      <div><label>Period</label><span>Q2 FY26</span></div>
+      <div><label>Issued</label><span class="ph" style="background:transparent; border-color:rgba(255,255,255,0.4); color:rgba(255,255,255,0.7);">Confirm</span></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 2 — TABLE OF CONTENTS
+  ══════════════════════════════════ -->
+  <div class="page" id="toc">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Table of Contents</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Table of Contents</h2>
+        <div class="section-sub-open">FY2026 Q2 Quarterly Report</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="toc-list">
+        <a class="toc-row" href="#sec-letter"><span class="toc-num">01</span><div style="flex:1;"><div class="toc-title">Letter from the Finance Team</div><div class="toc-sub">A note framing the quarter</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-glance"><span class="toc-num">02</span><div style="flex:1;"><div class="toc-title">Q2 at a Glance</div><div class="toc-sub">Headline stats for the quarter</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-income-expense"><span class="toc-num">03</span><div style="flex:1;"><div class="toc-title">Q2 Income &amp; Expense Breakdown</div><div class="toc-sub">National-level totals by category</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-fundraising"><span class="toc-num">04</span><div style="flex:1;"><div class="toc-title">Q2 Fundraising Summary</div><div class="toc-sub">Total raised · top campaigns · shout-outs</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-initiatives"><span class="toc-num">05</span><div style="flex:1;"><div class="toc-title">Q2 National Initiatives &amp; Event Finances</div><div class="toc-sub">YMC · YMLC · MAD · YM Gives</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-aid"><span class="toc-num">06</span><div style="flex:1;"><div class="toc-title">Financial Aid Deep Dive</div><div class="toc-sub">Applicants · funding sources · the Cypress story</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-sr"><span class="toc-num">07</span><div style="flex:1;"><div class="toc-title">Q2 SubRegional Activity</div><div class="toc-sub">SR-level income &amp; expenses · top NNs</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-highlights"><span class="toc-num">08</span><div style="flex:1;"><div class="toc-title">Highlights</div><div class="toc-sub">NN Spotlight · SR Spotlight · National Shura tours</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-notes"><span class="toc-num">09</span><div style="flex:1;"><div class="toc-title">Notes from Finance</div><div class="toc-sub">Handbook launch · friendly policy reminders</div></div><span class="toc-arrow">→</span></a>
+        <a class="toc-row" href="#sec-closing"><span class="toc-num">10</span><div style="flex:1;"><div class="toc-title">Closing</div><div class="toc-sub">Jazakumullahu khairan</div></div><span class="toc-arrow">→</span></a>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 3 — LETTER FROM THE FINANCE TEAM
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-letter">
+    <div class="page-content" style="display:flex; flex-direction:column; min-height:9.3in;">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 01 · Letter from the Finance Team</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Letter from the Finance Team</h2>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div style="flex:1;">
+        <div class="letter-body">
+          <div style="margin-bottom:22px;">
+            <img src="https://sulphia-iqbal.github.io/neighbornet-finances-handbook/bismillah.svg" alt="Bismillah ir-Rahman ir-Raheem" style="width:150px; height:auto; display:block; margin-bottom:8px;">
+            <div style="font-size:13.5px; color:var(--label-2); line-height:1.68;">We begin in the name of Allah <span lang="ar" style="color:var(--gold); font-size:1.05em;">ﷻ</span> and send peace and blessings upon His Messenger <span lang="ar" style="color:var(--gold); font-size:1.05em;">ﷺ</span></div>
+          </div>
+
+          <p class="lead">What a quarter it has been. Between YMC bringing our community together
+            in Baltimore, chapters across the country serving their communities through YM Gives and other
+            amazing events, our sisters showing up in D.C. for Muslim Advocacy Day, and the exciting groundwork
+            laid ahead for YMLC this summer — Q2 was full of khair. This report is the story of that khair, told
+            in numbers.</p>
+
+          <p>This quarter also took us on the road. National Shura tours to Georgia and Dallas let us sit
+            face-to-face with local leadership — hearing what's working, what's been confusing, and what chapters
+            actually need from us. Those conversations directly shaped the systems and reminders you'll find in
+            these pages.</p>
+
+          <p>So why do we care this much about receipts and spreadsheets and all of this seemingly boring,
+            mundane stuff? A man once asked the Prophet ﷺ whether he should tie his camel or trust in Allah ﷻ —
+            and the Prophet ﷺ told him to tie it <em>and</em> trust in Allah ﷻ. That's exactly what this work is.
+            We make du'a for barakah in YM's efforts, and then we tie our camel: the JotForms, the dashboards, the
+            receipts. All the admin work behind the tarbiyyah and spiritual development happening in our
+            organization — that's us tying our camel.</p>
+
+          <div class="pull-quote" style="margin:14px 0 16px;">
+            <p dir="rtl" lang="ar" style="font-style:normal; font-size:17px; text-align:right; margin-bottom:10px; color:#5C3A10;">إِنَّ اللَّهَ يَأْمُرُكُمْ أَنْ تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا</p>
+            <p style="margin-bottom:6px;">"Indeed, Allah commands you to render trusts to whom they are due."</p>
+            <cite>Qur'an 4:58</cite>
+          </div>
+
+          <p>Every dollar YM holds is exactly that — a trust from the community. So when you submit a JotForm to
+            track your finances, upload a proper receipt, or keep your dashboard current — that's not paperwork,
+            that's amanah. Because of your cooperation and attention to detail, we can account for every dollar
+            YM earned or spent this quarter, and hand the next group of leaders records they can actually plan
+            from. We're not just protecting money; we're protecting trust, barakah, and the reputation of this
+            work.</p>
+
+          <p style="margin-bottom:0;">We ask Allah ﷻ to accept our efforts, place barakah in every dollar
+            entrusted to this organization, and keep our chapters growing in strength, sisterhood, and service.</p>
+
+          <div class="letter-signoff" style="margin-top:26px; text-align:right;">
+            <p style="margin-bottom:10px;">With much love,</p>
+            <div style="font-size:16px; font-weight:700; color:var(--green);">YM Sisters National Finance Team</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 4 — Q2 AT A GLANCE
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-glance">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 02 · Q2 at a Glance</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Q2 at a Glance</h2>
+        <div class="section-sub-open">Headline numbers for the quarter</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-label">Total Income</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card exp"><div class="stat-label">Total Expenses</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card gold"><div class="stat-label">Net Change</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card blue"><div class="stat-label">JotForm Submissions</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card"><div class="stat-label">Active NNs Submitting</div><div class="stat-value">— <span style="font-size:13px; color:var(--label-3); font-weight:600;">/ 170+</span></div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card gold"><div class="stat-label">Financial Aid Disbursed</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card"><div class="stat-label">Raised via Fundraising</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>Optional:</strong> quarter-over-quarter deltas vs. Q1 (↑/↓ badges) may be layered onto the cards above once Q1 comparables are available.
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 5 — INCOME & EXPENSE BREAKDOWN
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-income-expense">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 03 · Income &amp; Expense Breakdown</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Q2 Income &amp; Expense Breakdown</h2>
+        <div class="section-sub-open">National-level totals by category</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Income by Category</div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Event Registrations</span><div class="bar-track"><div class="bar-fill income"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Merchandise</span><div class="bar-track"><div class="bar-fill income"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Fundraising</span><div class="bar-track"><div class="bar-fill income"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Donations</span><div class="bar-track"><div class="bar-fill income"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Transfers</span><div class="bar-track"><div class="bar-fill income"></div></div><span class="bar-val ph">Pending</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sub-title">Expenses by Category</div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Financial Aid</span><div class="bar-track"><div class="bar-fill expense"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Fundraising</span><div class="bar-track"><div class="bar-fill expense"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">NN / SR / National Ops</span><div class="bar-track"><div class="bar-fill expense"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Tarbiyyah</span><div class="bar-track"><div class="bar-fill expense"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Transportation</span><div class="bar-track"><div class="bar-fill expense"></div></div><span class="bar-val ph">Pending</span></div>
+            <div class="bar-row"><span class="bar-label">Joint Events (Bros.)</span><div class="bar-track"><div class="bar-fill expense"></div></div><span class="bar-val ph">Pending</span></div>
+          </div>
+        </div>
+      </div>
+
+      <table>
+        <thead><tr><th>Category</th><th>Type</th><th>Amount</th><th>% of Total</th></tr></thead>
+        <tbody>
+          <tr><td>Event Registrations</td><td><span class="badge badge-opt">Income</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>Donations</td><td><span class="badge badge-opt">Income</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>Financial Aid</td><td><span class="badge badge-exp">Expense</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>National Operations</td><td><span class="badge badge-exp">Expense</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-info">
+        <strong>What drove the numbers:</strong> <span class="ph">Pending — 2–3 sentence narrative on the biggest categories</span>,
+        likely YMC/YMLC pass-throughs. Pass-through amounts are labeled separately so they don't inflate perceived program cost.
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 6 — FUNDRAISING SUMMARY
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-fundraising">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 04 · Q2 Fundraising Summary</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Q2 Fundraising Summary</h2>
+        <div class="section-sub-open">What we raised, and who led the way</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="stat-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="stat-card"><div class="stat-label">Total Raised Nationally</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card gold"><div class="stat-label">Tie-in to YM Gives</div><div class="stat-value" style="font-size:14px; color:var(--label-2); font-weight:500;"><span class="ph">Pending</span></div></div>
+      </div>
+
+      <div class="sub-title">Top Fundraising Campaigns / Types</div>
+      <table>
+        <thead><tr><th>Campaign / Type</th><th>Amount Raised</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="sub-title">Top Fundraising NNs / SRs — Shout-outs</div>
+      <table>
+        <thead><tr><th>Rank</th><th>NN / SR</th><th>Amount Raised</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>2</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>3</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>4</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>5</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 6</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 7 — NATIONAL INITIATIVES & EVENT FINANCES
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-initiatives">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 05 · National Initiatives &amp; Event Finances</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Q2 National Initiatives &amp; Event Finances</h2>
+        <div class="section-sub-open">YMC · YMLC · MAD · YM Gives</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="account-cards">
+        <div class="account-card">
+          <span class="account-tag">YMC</span>
+          <h3>YM Conference — Baltimore</h3>
+          <p>Our national conference, bringing together sisters from across the country for a weekend of tarbiyyah, connection, and community.</p>
+          <div class="kv-inner">
+            <div class="kv-row"><span class="kv-key">Registration Income</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">Major Expenses</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">Net Position</span><span class="kv-val ph">Pending</span></div>
+          </div>
+          <p style="margin-top:8px; font-size:11.5px;"><span class="ph">Confirm</span> whether hotel/bus costs were pass-throughs.</p>
+        </div>
+
+        <div class="account-card gold-top">
+          <span class="account-tag" style="background:var(--gold-fill); color:var(--gold);">YMLC</span>
+          <h3>YM Leadership Conference — Florida</h3>
+          <div class="callout callout-warn" style="margin:10px 0;">
+            <strong>Framing note:</strong> YMLC takes place in Q3, but deposits and major payments occurred in Q2,
+            so its expenses appear in this quarter's numbers.
+          </div>
+          <div class="kv-inner">
+            <div class="kv-row"><span class="kv-key">Deposits Paid (Q2)</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">Travel (Q2)</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">Registration Income</span><span class="kv-val ph">Pending</span></div>
+          </div>
+        </div>
+
+        <div class="account-card">
+          <span class="account-tag">MAD</span>
+          <h3>Muslim Advocacy Day — Washington, D.C.</h3>
+          <p>A national advocacy event bringing YM sisters to D.C. to engage directly with policymakers.</p>
+          <div class="kv-inner">
+            <div class="kv-row"><span class="kv-key">Travel / Lodging / Registration</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">Funding Source</span><span class="kv-val ph">Pending</span></div>
+          </div>
+        </div>
+
+        <div class="account-card">
+          <span class="account-tag">YM Gives</span>
+          <h3>National Service Campaign</h3>
+          <p>Our national service campaign, run across chapters, mobilizing sisters to give back locally.</p>
+          <div class="kv-inner">
+            <div class="kv-row"><span class="kv-key">Spent on Supplies</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">NNs That Participated</span><span class="kv-val ph">Pending</span></div>
+            <div class="kv-row"><span class="kv-key">Funds Raised (External)</span><span class="kv-val ph">Pending</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 8 — FINANCIAL AID DEEP DIVE
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-aid">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 06 · Financial Aid Deep Dive</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Financial Aid Deep Dive</h2>
+        <div class="section-sub-open">Making sure every sister can attend</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="stat-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="stat-card gold"><div class="stat-label">Applicants (Q2)</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card gold"><div class="stat-label">Total Amount Given</div><div class="stat-value">—</div><div class="stat-sub"><span class="ph">Pending</span></div></div>
+        <div class="stat-card gold"><div class="stat-label">Applications From</div><div class="stat-value" style="font-size:14px; color:var(--label-2); font-weight:500;"><span class="ph">Pending</span></div></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Funding Sources</div>
+          <table>
+            <thead><tr><th>Source</th><th>%</th></tr></thead>
+            <tbody>
+              <tr><td>National Budget</td><td class="num"><span class="ph">Pending</span></td></tr>
+              <tr><td>SR Budgets</td><td class="num"><span class="ph">Pending</span></td></tr>
+              <tr><td>NN Budgets</td><td class="num"><span class="ph">Pending</span></td></tr>
+              <tr><td>Designated Donations</td><td class="num"><span class="ph">Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="sub-title">By Event</div>
+          <table>
+            <thead><tr><th>Event</th><th>%</th></tr></thead>
+            <tbody>
+              <tr><td>YMC</td><td class="num"><span class="ph">Pending</span></td></tr>
+              <tr><td>YMLC</td><td class="num"><span class="ph">Pending</span></td></tr>
+              <tr><td>Other</td><td class="num"><span class="ph">Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cs-wrapper">
+        <div class="cs-label">Featured Story</div>
+        <h3 style="font-size:16px; margin-bottom:8px;">Cypress Steps Up for Their Whole SubRegion</h3>
+        <p class="body-text">
+          Cypress NN donated funds to cover <strong>all of their SubRegion's</strong> financial aid requests for YMLC —
+          making sure every sister who wanted to attend, could.
+          <span class="ph">Pending — amount, SR name, number of attendees covered</span>
+        </p>
+        <div class="cs-grid">
+          <div class="cs-block"><h4>Amount Donated</h4><div class="cs-figure ph">Pending</div></div>
+          <div class="cs-block"><h4>SubRegion Covered</h4><div class="cs-figure ph">Pending</div></div>
+          <div class="cs-block"><h4>Attendees Covered</h4><div class="cs-figure ph">Pending</div></div>
+        </div>
+        <div class="pull-quote">
+          <p>"<span class="ph">Pending — quote from Cypress or the SRC</span>"</p>
+          <cite><span class="ph">Pending — name, role</span></cite>
+        </div>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 8</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 9 — SUBREGIONAL ACTIVITY
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-sr">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 07 · Q2 SubRegional Activity</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Q2 SubRegional Activity</h2>
+        <div class="section-sub-open">We'd love to see every dashboard active</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="sub-title">Most Financially Active SRs</div>
+      <table>
+        <thead><tr><th>Rank</th><th>SubRegion</th><th>Transactions</th><th>Dollar Volume</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>2</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+          <tr><td>3</td><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="two-col">
+        <div>
+          <div class="sub-title">Most Active NN, by SR</div>
+          <table>
+            <thead><tr><th>SubRegion</th><th>Top NN</th></tr></thead>
+            <tbody>
+              <tr><td><span class="ph">Pending</span></td><td><span class="ph">Pending</span></td></tr>
+              <tr><td><span class="ph">Pending</span></td><td><span class="ph">Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="sub-title">JotForm Submissions by SR</div>
+          <table>
+            <thead><tr><th>SubRegion</th><th>Submissions</th></tr></thead>
+            <tbody>
+              <tr><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+              <tr><td><span class="ph">Pending</span></td><td class="num"><span class="ph">Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>Most common expense categories:</strong> <span class="ph">Pending — nationally, plus any notable SR-level differences</span>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 9</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 10 — HIGHLIGHTS · NN + SR
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-highlights">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 08 · Highlights</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Highlights</h2>
+        <div class="section-sub-open">NN Spotlight · SR Spotlight · NS tours</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="sub-title">NN Spotlight — Maine</div>
+      <div class="cs-wrapper">
+        <div class="cs-label">Model for Other NNs</div>
+        <h3 style="font-size:15.5px; margin-bottom:8px;">A Maine NeighborNet Secures State Government Funding</h3>
+        <p class="body-text">
+          A NeighborNet in Maine received a grant from their state government — proof that external funding is
+          possible for chapters willing to pursue it.
+          <span class="ph">Pending — NN name, grant amount, what it funds, how they applied</span>
+        </p>
+        <div class="pull-quote">
+          <p>"<span class="ph">Pending — quote from the NN</span>"</p>
+          <cite><span class="ph">Pending — name, role</span></cite>
+        </div>
+        <div class="img-grid">
+          <div><div class="img-ph" style="height:1.3in;">Photo pending</div><div class="img-ph-cap">Maine NN · Grant Announcement · <span class="ph">Month</span></div></div>
+          <div><div class="img-ph" style="height:1.3in;">Photo pending</div><div class="img-ph-cap">Maine NN · <span class="ph">Caption pending</span></div></div>
+        </div>
+      </div>
+
+      <div class="sub-title">SR Spotlight</div>
+      <div class="callout callout-warn">
+        <strong>TBD:</strong> <span class="ph">Pick one SR spotlight before generation</span>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 10</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 11 — HIGHLIGHTS · NS TOURS
+  ══════════════════════════════════ -->
+  <div class="page">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 08 · Highlights (cont.)</span>
+      </div>
+
+      <div class="sub-title" style="margin-top:0;">NS Tours — National Shura Visits</div>
+      <h2 style="font-size:18px; margin-bottom:18px; letter-spacing:-0.02em;">Connecting with local leadership</h2>
+
+      <div class="account-cards" style="grid-template-columns: 1fr;">
+        <div class="account-card">
+          <span class="account-tag">Georgia</span>
+          <h3>Sarah (TX, Chicago) &amp; Ayra (VA)</h3>
+          <p><span class="ph">Pending — dates, what was covered</span></p>
+          <div class="pull-quote" style="margin-top:10px;">
+            <p>"<span class="ph">Pending — quote</span>"</p>
+          </div>
+          <div class="img-grid" style="grid-template-columns: repeat(3, 1fr); margin-top:12px; margin-bottom:0;">
+            <div><div class="img-ph" style="height:1.1in;">Photo pending</div><div class="img-ph-cap">Georgia · <span class="ph">Month</span></div></div>
+            <div><div class="img-ph" style="height:1.1in;">Photo pending</div><div class="img-ph-cap">Georgia · <span class="ph">Month</span></div></div>
+            <div><div class="img-ph" style="height:1.1in;">Photo pending</div><div class="img-ph-cap">Georgia · <span class="ph">Month</span></div></div>
+          </div>
+        </div>
+        <div class="account-card">
+          <span class="account-tag">Dallas</span>
+          <h3>Aisha (NJ-N) &amp; Thameena (TX)</h3>
+          <p><span class="ph">Pending — dates, what was covered</span></p>
+          <div class="pull-quote" style="margin-top:10px;">
+            <p>"<span class="ph">Pending — quote</span>"</p>
+          </div>
+          <div class="img-grid" style="grid-template-columns: repeat(3, 1fr); margin-top:12px; margin-bottom:0;">
+            <div><div class="img-ph" style="height:1.1in;">Photo pending</div><div class="img-ph-cap">Dallas · <span class="ph">Month</span></div></div>
+            <div><div class="img-ph" style="height:1.1in;">Photo pending</div><div class="img-ph-cap">Dallas · <span class="ph">Month</span></div></div>
+            <div><div class="img-ph" style="height:1.1in;">Photo pending</div><div class="img-ph-cap">Dallas · <span class="ph">Month</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 12 — NOTES FROM FINANCE
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-notes">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Section 09 · Notes from Finance</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Notes from Finance</h2>
+        <div class="section-sub-open">Handbook launch &amp; friendly policy reminders</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="callout callout-rule">
+        <strong>The NN Finance Handbook is here! 🎉</strong> We're excited to announce the release of the
+        <strong>NN Finance Handbook</strong> — your complete guide to accounts, JotForm submission types,
+        dashboards, approvals, lump sums, audits, and a full worked case study.
+        <a href="https://sulphia-iqbal.github.io/neighbornet-finances-handbook/ym-nn-finances-handbook.html" style="color:var(--green); font-weight:600;">Read it here →</a>
+      </div>
+
+      <div class="sub-title">Friendly Financial Policy Reminders</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <div class="step-body">
+            <h4>Zelle is now available for reimbursements <span class="badge badge-opt">Update</span></h4>
+            <p>Prefer <strong>Zelle over Venmo</strong> when possible. Coordinate Zelle details with
+              <strong>finance@ymsisters.com</strong> after submitting the JotForm.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <div class="step-body">
+            <h4>No personal expenses on the same receipt as YM expenses <span class="badge badge-exp">Strict</span></h4>
+            <p>Mixed receipts <strong>will be denied</strong> — we are strict on this. Make YM purchases on their own receipt.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <div class="step-body">
+            <h4>Proper event names in Expense Details are required</h4>
+            <p>Format: <strong>Date · Event Name · Subcategory</strong> (e.g., <em>1/9/26 NJ Gala – Decorations</em>).
+              Some NNs are omitting event names and being contacted individually — save everyone the back-and-forth
+              by labeling correctly the first time.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">4</div>
+          <div class="step-body">
+            <h4>NN collab confusion, cleared up</h4>
+            <p>When two NNs split costs, up to <strong>3 JotForms</strong> are needed — (①) the payer's reimbursement
+              expense, (②) the other NN's expense for sending their share, (③) the receiving NN's income.
+              See Handbook §05b for the full worked example.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">5</div>
+          <div class="step-body">
+            <h4>Submit separate JotForms for each event</h4>
+            <p>We don't want multiple events' expenses combined into one JotForm. If you paid for or attended more
+              than one event, submit a <strong>separate JotForm for each event</strong> so we can track and approve
+              them individually.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">6</div>
+          <div class="step-body">
+            <h4>Also worth remembering</h4>
+            <ul>
+              <li>Receipt format: <strong>PDFs, not screenshots</strong>, for online orders.</li>
+              <li>As always — <strong>no receipt, no approval.</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 12</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE 13 — CLOSING
+  ══════════════════════════════════ -->
+  <div class="page" id="sec-closing">
+    <div class="page-content">
+      <div class="page-chrome">
+        <span class="brand">Young Muslims · Finance Department</span>
+        <span class="section-tag">Closing</span>
+      </div>
+
+      <div class="section-open">
+        <h2>Closing</h2>
+        <div class="section-sub-open">Jazakumullahu khairan</div>
+        <div class="accent-rule"></div>
+      </div>
+
+      <div class="card">
+        <p class="body-text">
+          Thank you to every NNC, SRC, SR Finance Lead, and National Shura member who submitted, approved, and
+          tracked finances this quarter — your diligence keeps YM transparent and trustworthy with every dollar
+          entrusted to us. May Allah ﷻ accept our efforts and multiply the barakah in our chapters and communities.
+        </p>
+        <p class="body-text" style="margin-bottom:0;">
+          Questions about anything in this report? Reach out anytime at
+          <strong>finance@ymsisters.com</strong>.
+        </p>
+      </div>
+
+      <div class="closing-footer">
+        <p class="b">﷽ &nbsp; ﷺ</p>
+        <p>Young Muslims · Finance Department · <a href="mailto:finance@ymsisters.com">finance@ymsisters.com</a></p>
+        <p style="margin-top:8px; opacity:0.6; font-size:11px;">Q2 FY2026 National Finance Report · For Internal Use Only</p>
+      </div>
+
+      <div class="page-footer-strip">
+        <span>Young Muslims · Finance Department</span>
+        <span>Q2 FY2026 National Finance Report · For Internal Use Only</span>
+        <span>Page 13</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
